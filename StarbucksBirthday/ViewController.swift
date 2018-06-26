@@ -9,17 +9,23 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
+    @IBOutlet weak var name: UITextField!
+    @IBOutlet weak var drink: UITextField!
+    @IBOutlet weak var deliveryTime: UIDatePicker!
+    
+    @IBOutlet weak var feedbackText: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
 
 
+    @IBAction func submitButtonTapped(_ sender: Any) {
+        let newName = name.text
+        let newDrink = drink.text
+        let newDate = deliveryTime.date
+        
+        feedbackText.text = "🎉 Happy Birthday, \(String(describing: newName!))! Your \(newDrink!) will be delivered at \(newDate))."
+    }
 }
 
