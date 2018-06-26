@@ -19,7 +19,6 @@ class ViewController: UIViewController {
         super.viewDidLoad()
     }
 
-
     @IBAction func submitButtonTapped(_ sender: Any) {
         let newName = name.text
         let newDrink = drink.text
